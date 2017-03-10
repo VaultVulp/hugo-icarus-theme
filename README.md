@@ -8,7 +8,6 @@ Icarus is a responsive and customizable theme for bloggers. It's a port of the s
 
 I assume you've Git installed. Inside the folder of your Hugo site run
 
-    $ mkdir themes
     $ cd themes
     $ git clone https://github.com/digitalcraftsman/hugo-icarus-theme.git
 
@@ -110,6 +109,13 @@ You can deactivate them under `params.widgets`:
         tags = true
         tag_cloud = true
 
+### Date line
+
+The date line includes: post date, # of words, approximate reading, time tags and categories. However, if you want certain pages to omit the date line, simply put `nodateline = true` in the front matter for that page.
+
+### Disable Previous / next article links
+
+To disable the inclusion of a previous/next article link at the bottom of the page, add `noprevnext = true` to the front matter. This feature, along with `nodateline` can be used to create standalone pages that are less "blog-like"
 
 ## Localization (l10n)
 
@@ -131,11 +137,11 @@ Mathematical equations in form of LaTeX or MathML code can be rendered with the 
 
 You can also print formulas inline. In this case wrap the formula only once with `$`.
 
+If you don't need equations, you can disable MathJax but putting `disable_mathjax = true` in your config.toml. This will prevent clients from unnecessarily downloading the MathJax library.
 
 ## Shortcodes
 
 Last but not least I included some useful [shortcodes](http://gohugo.io/extras/shortcodes/) to make your life easier.
-
 
 ### Gallery
 

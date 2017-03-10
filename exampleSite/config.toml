@@ -1,4 +1,4 @@
-baseurl = "http://www.yourdomain.com/"
+baseurl = "https://example.org/"
 languageCode = "en-us"
 title = "Icarus"
 # Enable comments by entering your Disqus shortname
@@ -23,9 +23,15 @@ theme = "hugo-icarus-theme"
     site_description = ""
     copyright  = "Powered by [Hugo](//gohugo.io). Theme by [PPOffice](http://github.com/ppoffice)."
     avatar = "css/images/avatar.png"
+    logo = "css/images/logo.png"
+    disable_mathjax = false # set to true to disable MathJax
 
     # Format dates with Go's time formatting
     date_format = "2006-01-02"
+
+    # Add custom assets with their paths relative to the static folder
+	custom_css = []
+	custom_js  = []
 
 # Create custom menu entries by defining a label and a link for
 # them. Since you can also link posts, you've the option the
@@ -56,8 +62,9 @@ theme = "hugo-icarus-theme"
 [social]
 # Add your social network accounts to the profile section on the left
 # by entering your username. The links to your account will be
-# create automatically.
+# created automatically.
     github          = "digitalcraftsman"
+    gitlab          = ""
     bitbucket       = ""
     jsfiddle        = ""
     codepen         = ""

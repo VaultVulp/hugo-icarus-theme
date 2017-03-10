@@ -1,7 +1,7 @@
 <aside id="profile">
   <div class="inner profile-inner">
     <div class="base-info profile-block">
-      <img id="avatar" src="{{ .Site.BaseURL }}{{ .Site.Params.avatar }}">
+      <img id="avatar" src="{{ .Site.Params.avatar | absURL }}">
       {{ with .Site.Params.author}}<h2 id="name">{{ . }}</h2>{{ end }}
       {{ with .Site.Params.bio }}<h3 id="title">{{ . }}</h3>{{ end }}
       {{ with .Site.Params.location }}<span id="location"><i class="fa fa-map-marker"></i>{{ . }}</span>{{ end }}
@@ -21,17 +21,17 @@
           {{ len .Site.Taxonomies.tags }}
         {{ else }}
           0
-        {{ end }}  
+        {{ end }}
         <span>
             {{with .Site.Data.l10n.profile.tags}}{{.}}{{end}}
         </span>
       </div>
     </div>
-    <div class="contact-info profile-block">
-      <table class="contact-list">
+    <div class="profile-block social-links">
+      <table>
         <tr>
           {{ partial "social" . }}
-          <td><a href="{{ .RSSLink }}" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+          <td><a href="{{ .Site.RSSLink }}" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
         </tr>
       </table>
     </div>
